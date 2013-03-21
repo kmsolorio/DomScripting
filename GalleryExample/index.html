@@ -7,10 +7,12 @@
   <body>
     <h1>Snapshots</h1>
     <ul>
-      <li><a href="images/apl_somoa.jpg" title="Puppy from the APL">Puppy!</a></li>
-      <li><a href="images/chicago.jpg" title="My new home: Chicago!">Chicago</a></li>
-      <li><a href="images/flowers.jpg" title="Flowers">Flowers</a></li>
-      <li><a href="images/wharf.jpg" title="San Francisco Trip">Fisherman's Wharf</a></li>
+      <li><a href="images/apl_somoa.jpg" title="Puppy from the APL" onclick="showPic(this); return false">Puppy!</a></li>
+      <li><a href="images/chicago.jpg" title="My new home: Chicago!" onclick="showPic(this); return false">Chicago</a></li>
+      <li><a href="images/flowers.jpg" title="Flowers" onclick="showPic(this); return false">Flowers</a></li>
+      <li><a href="images/wharf.jpg" title="San Francisco Trip" onclick="showPic(this); return false">Fisherman's Wharf</a></li>
     </ul>
+    <img id="placeholder" src="images/" alt="blank" width="400" height="300">
+    <script type="text/javascript" src="scripts/showpic.js"></script>
   </body>
 </html>
