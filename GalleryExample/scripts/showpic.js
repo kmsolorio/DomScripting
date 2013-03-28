@@ -1,3 +1,20 @@
+function prepareGallery() {
+  if (!document.getElementsByTagName) return false;
+  if (!document.getElementById) return false;
+  if (!document.getElementById("imagegallery")) return false;
+
+  var gallery = document.getElementById("imagegallery");
+  var links = gallery.getElementsByTagName("a");
+
+  for (var i = 0; i < links.length; i ++) {
+    links[i].onclick = function() {
+      showPic(this);
+      return false;
+    }
+  }
+};
+
+
 function showPic(whichpic) {
   var source = whichpic.getAttribute('href');
   var text = whichpic.getAttribute('title');
@@ -7,8 +24,4 @@ function showPic(whichpic) {
   description.firstChild.nodeValue = text;
 };
 
-function countBodyChildren() {
-  var body_element = document.getElementsByTagName('body')[0];
-  alert(body_element.nodeType);
-};
-
+window.onload = prepareGallery;
