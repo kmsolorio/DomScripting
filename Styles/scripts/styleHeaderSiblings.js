@@ -5,9 +5,7 @@ function styleHeaderSiblings(){
   for (var i=0; i < headers.length; i ++) {
     elem = getNextElement(headers[i].nextSibling);
     if (!elem) continue;
-
-    elem.style.fontWeight = "bold";
-    elem.style.fontSize = "1.2em";
+    addClass(elem, "intro");
   }
 }
 
@@ -19,6 +17,18 @@ function getNextElement(node) {
     return getNextElement(node.nextSibling);
   }
   return null;
+}
+
+function addClass(element, className) {
+  if (element.className) {
+    newClassName = element.className;
+    newClassName += " ";
+    newClassName += className;
+    element.className = newClassName;
+  }
+  else {
+    element.className = className;
+  }
 }
 
 addLoadEvent(styleHeaderSiblings);

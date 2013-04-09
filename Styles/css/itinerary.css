@@ -4,6 +4,11 @@ body {
   color: #000;
 }
 
+.intro {
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
 table {
   margin: auto;
   border: 1px solid #699;
