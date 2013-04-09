@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Style Examples</title>
+  </head>
+  <body>
+    <p id="example" style="color: grey; font-family: 'Arial', sans-serif;">
+      An example of a paragraph
+    </p>
+    <script>
+      window.onload = function() {
+        var para = document.getElementById("example");
+        para.style.color = 'black';
+        alert(para.style.color);
+        alert(para.style.fontFamily);
+      }
+    </script>
+  </body>
+</html>
