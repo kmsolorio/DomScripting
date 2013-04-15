@@ -8,7 +8,7 @@ function positionMessage() {
   elem.style.left = "50px";
   elem.style.top = "100px";
 
-  movement = setTimeout(moveMessage, 5000);
+  movement = setTimeout(moveMessage, 10);
 };
 
 function moveMessage() {
